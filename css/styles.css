@@ -72,6 +72,17 @@ h3 {
   padding-bottom: 94px;
 }
 /*хедер*/
+.link-header.current::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+  position: relative;
+  bottom: auto;
+  top: 33px;
+}
 .header {
   align-items: center;
   border-bottom: 1px solid #ececec;
@@ -236,9 +247,29 @@ h3 {
 }
 .image-list {
   display: flex;
+  position: relative;
 }
 .image-list .item + .item {
   margin-left: 30px;
+}
+.image-title {
+  position: absolute;
+  text-transform: uppercase;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  width: 370px;
+  bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+  text-align: center;
+  color: #ffffff;
 }
 /* Секция 4 */
 .background {
@@ -549,6 +580,8 @@ h3 {
 /* МОДАЛЬНОЕ ОКНО */
 .is-hidden {
   overflow: hidden;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop {
   width: 100vw;
@@ -559,6 +592,8 @@ h3 {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.2);
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -576,4 +611,20 @@ h3 {
   transform: translate(-50%, -50%);
 }
 .modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 30px;
+  width: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: white;
+}
+.close:hover,
+.close:focus {
+  fill: var(--hover-focus-color);
 }
