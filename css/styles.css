@@ -607,7 +607,7 @@ h3 {
 }
 .backdrop.is-hidden {
   opacity: 0;
-  poinnter-events: none;
+  pointer-events: none;
   visibility: hidden;
 }
 .modal {
