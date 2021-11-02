@@ -38,6 +38,7 @@ img {
 }
 .link-header {
   color: var(--title-color);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -83,8 +84,7 @@ h3 {
   background-color: #2196f3;
   border-radius: 2px;
   position: absolute;
-  bottom: auto;
-  top: 46px;
+  bottom: -34px;
 }
 .header {
   align-items: center;
@@ -147,7 +147,7 @@ h3 {
   padding-bottom: 32px;
   display: flex;
   align-items: center;
-
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -250,14 +250,20 @@ h3 {
 }
 .image-list {
   display: flex;
+}
+.list-item {
   position: relative;
 }
 .image-list .item + .item {
   margin-left: 30px;
 }
 .image-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   text-transform: uppercase;
+  height: 70px;
 
   font-weight: 700;
   font-size: 14px;
@@ -266,10 +272,8 @@ h3 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  width: 370px;
+  width: 100%;
   bottom: 0;
-  padding-top: 27px;
-  padding-bottom: 27px;
   background-color: rgba(47, 48, 58, 0.8);
   text-align: center;
   color: #ffffff;
@@ -336,6 +340,7 @@ h3 {
   height: 44px;
   border-radius: 50px;
 
+  transition-property: fill, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -377,7 +382,7 @@ h3 {
   width: 100%;
   height: 100%;
   color: var(--icons);
-
+  transition-property: color, border, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -457,6 +462,7 @@ h3 {
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.1);
 
+  transition-property: background-color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -504,7 +510,7 @@ h3 {
   color: var(--title-color);
   background: #f5f4fa;
   border-radius: 4px;
-
+  transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -521,7 +527,9 @@ h3 {
 }
 .portfolio-link {
   display: block;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:hover,
 .card:focus {
@@ -569,7 +577,6 @@ h3 {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translatey(100%);
-
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -583,7 +590,7 @@ h3 {
 /* МОДАЛЬНОЕ ОКНО */
 .is-hidden {
   overflow: hidden;
-  transition-duration: 1000ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop {
@@ -595,7 +602,7 @@ h3 {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  transition-duration: 1000ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
@@ -624,6 +631,7 @@ h3 {
   width: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition-property: fill;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: white;
 }
