@@ -72,6 +72,9 @@ h3 {
   padding-bottom: 94px;
 }
 /*хедер*/
+.link-header.current {
+  position: relative;
+}
 .link-header.current::after {
   content: '';
   display: block;
@@ -79,9 +82,9 @@ h3 {
   height: 4px;
   background-color: #2196f3;
   border-radius: 2px;
-  position: relative;
+  position: absolute;
   bottom: auto;
-  top: 33px;
+  top: 46px;
 }
 .header {
   align-items: center;
